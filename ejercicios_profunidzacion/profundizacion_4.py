@@ -33,3 +33,44 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+print( 'ingrese una palabra:') 
+palabra_1 = str(input())
+print( 'ingrese otra palabra:') 
+palabra_2 = str(input())
+print( 'ingrese una tercera palabra:') 
+palabra_3 = str(input())
+print( 'ingrese 1 para orden alfabetico o 2 para ordenarlas segun su cantidad de letras')
+eleccion = int( input())
+
+if eleccion == 1:
+    if palabra_1 > palabra_2 and palabra_1 > palabra_3:
+        if palabra_2 > palabra_3:
+            print(palabra_3 , palabra_2 , palabra_1)
+        elif palabra_3 > palabra_2:
+            print(palabra_2 , palabra_3 , palabra_1)
+    elif palabra_2 > palabra_1 and palabra_2 > palabra_3:
+        if palabra_1 > palabra_3:
+            print(palabra_3 , palabra_1 , palabra_2)
+        elif palabra_3 > palabra_1:
+            print(palabra_1 , palabra_3 , palabra_2)
+    elif palabra_3 > palabra_1 and palabra_3 > palabra_2:
+        if palabra_1 > palabra_2:
+            print(palabra_2 , palabra_1 , palabra_3)
+        elif palabra_2 > palabra_1:
+            print(palabra_1 , palabra_2 , palabra_3)
+else:
+    if len(palabra_1) > len(palabra_2) and len(palabra_1) > len(palabra_3):
+        if len(palabra_2) > len(palabra_3):
+            print(palabra_1 , palabra_2 , palabra_3)
+        elif len(palabra_3) > len(palabra_2):
+            print(palabra_1 , palabra_3 , palabra_2)
+    elif len(palabra_2) > len(palabra_1) and len(palabra_2) > len(palabra_3):
+        if len(palabra_1) > len(palabra_3):
+            print(palabra_2 , palabra_1 , palabra_3)
+        elif len(palabra_3) > len(palabra_1):
+            print(palabra_2 , palabra_3, palabra_1)
+    elif len(palabra_3) > len(palabra_1) and len(palabra_3) > len(palabra_2):
+        if len(palabra_1) > len(palabra_2):
+            print(palabra_3 , palabra_1 , palabra_2)
+        elif len(palabra_2) > len(palabra_1):
+            print(palabra_3 , palabra_2 , palabra_1)

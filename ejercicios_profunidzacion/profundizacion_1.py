@@ -20,5 +20,20 @@ Calcule la diferencia entre ellos e informe por pantalla
 si el resultado es positivo, negativo o cero.
 '''
 
+from cgi import print_environ
+
+
 print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
+print( 'ingrese un numero')
+num_1 = int(input()) 
+print('ingrese segundo numero')
+num_2 = int( input()) 
+
+resta = num_1 - num_2
+if resta > 0:
+    print( resta , 'es positivo')
+elif resta < 0:
+    print(resta, ' es negativo')
+else :
+    print( 'el resultado es igual a 0')
